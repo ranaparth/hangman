@@ -42,6 +42,6 @@ func DisplayGameOutro(g *game.Game) {
 		fmt.Println("Congratulations, you won!")
 	} else {
 		fmt.Println("Sorry, you lost. The word was", g.Word().String())
-		fmt.Println("It means,", g.Word().Defn())
+		fmt.Println("It means — ", g.Word().Defn())
 	}
 }

@@ -1,28 +1,24 @@
 package dictionary
 
 import (
-	"bufio"
-	"os"
+	"bytes"
+
+	_ "embed"
 )
+
+//go:embed wordlist.txt
+var wordListContent string
 
 func getStaticList() []string {
 	// Create slice to store words
 	var wordList []string
 
-	// Open wordlist file
-	file, err := os.Open("data/wordlist.txt")
-	if err != nil {
-		panic(err)
-	}
-	defer file.Close()
+	// Split file contents into lines
+	lines := bytes.Split([]byte(wordListContent), []byte{'\n'})
 
-	// Read words from file and add to wordList slice
-	scanner := bufio.NewScanner(file)
-	for scanner.Scan() {
-		wordList = append(wordList, scanner.Text())
-	}
-	if err := scanner.Err(); err != nil {
-		panic(err)
+	// Loop through lines and print each one
+	for _, line := range lines {
+		wordList = append(wordList, string(line))
 	}
 
 	return wordList
