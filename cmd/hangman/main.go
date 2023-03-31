@@ -8,6 +8,8 @@ import (
 	"github.com/ranaparth/hangman/internal/game"
 	"github.com/ranaparth/hangman/internal/input"
 	"github.com/ranaparth/hangman/internal/output"
+
+	_ "embed"
 )
 
 func main() {
