@@ -5,7 +5,7 @@ Installation
 ### Installation
 To install Hangman, you'll need to have Go 1.16 or later installed on your system. Once you have Go installed, simply run the following command in your terminal:
 ```bash
-go install github.com/ranaparth/hangman/cmd/hangman
+go install github.com/ranaparth/hangman/cmd/hangman@v0.1.0
 ```
 This will download and install the Hangman game to your $GOPATH/bin directory, which you can then run from the command line.
 
